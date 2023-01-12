@@ -1,0 +1,92 @@
+.hero {
+	padding: 172px 0 86px;
+	margin-bottom: 80px;
+	background: {
+		color: $gray;
+		size: cover;
+		repeat: no-repeat;
+	}
+
+	@include tablet {
+		margin-bottom: 64px;
+		padding: 156px 0 50px;
+	}
+
+	@include mobile {
+		margin-bottom: 24px;
+		padding: 76px 0 24px;
+	}
+
+	&_women {
+		background-image: url('../img/hero-bg-women-desktop.jpg');
+
+		@include laptop {
+			background-image: url('../img/hero-bg-women-laptop.jpg');
+		}
+
+		@include tablet {
+			background-image: url('../img/hero-bg-women-tablet.jpg');
+		}
+
+		@include tablet {
+			background-image: url('../img/hero-bg-women-mobile.jpg');
+		}
+	}
+
+	&__content {
+		color: $second-color;
+		max-width: 590px;
+
+		@include tablet {
+			max-width: 410px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 40px;
+		font-weight: 400;
+		font-size: 44px;
+		line-height: 120%;
+		text-transform: uppercase;
+
+		@include tablet {
+			font-size: 30px;
+			margin-bottom: 24px;
+		}
+
+		@include mobile {
+			font-size: 20px;
+			margin-bottom: 16px;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		padding: 14px 40px;
+		border: 1px solid $second-color;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 17px;
+		text-transform: uppercase;
+		transition: background-color .3s ease-in-out;
+
+		&:hover {
+			background-color:$dark-gray; 
+		}
+
+		&:focus {
+			background-color:rgba(255, 255, 255, 0.1);
+			outline: transparent;
+		}
+
+		&:disabled {
+			background-color:$light-gray;
+		}
+
+		@include tablet {
+			font-size: 10px;
+			line-height: 12px;
+			padding: 12px 40px;
+		}
+	}
+}
